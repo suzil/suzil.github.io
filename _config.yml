@@ -17,7 +17,7 @@
 title: Susannah Klaneček
 email: suzil@protonmail.ch
 description: >- # this means to ignore newlines until "baseurl:"
-  impulsive and risk-loving data scientist with a desire to incrementally improve the world
+  risk-loving data scientist with a desire to incrementally improve the world
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
