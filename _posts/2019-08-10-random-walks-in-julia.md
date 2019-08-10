@@ -5,16 +5,9 @@ date:   2019-08-10
 ---
 
 
-
-```julia
-using Luxor, Plots
-```
-
 Use the Julia library Luxor to generate some random walk graphs with turtles. Demonstrate how you can use Simplex (similar to Perlin) noise.
 
 This post was inspired by a chapter in The Nature of Code. [Check it out!](https://natureofcode.com/book/introduction/)
-
-# Random walks
 
 Random walk is a stochastic process that describe a path formed by random steps. Imagine we have a 0-D creature point that lives on a 1-D line. The creature randomly looks around for food to the left and right. At every timestep, the creature has a 50% chance of moving left and a 50% chance of moving right. Let's sample a random number $x$ from a uniform distribution between 0 and 1. If $x$ is greater than 0.5, then we move right. Otherwise, we move left.
 
@@ -31,6 +24,10 @@ Illustrated, this looks like:
 
 We will use the Julia library Luxor to help create some simple vector animations with turtles.
 
+
+```julia
+using Luxor, Plots
+```
 
 ```julia
 movie = Movie(600, 22, "turtle");
