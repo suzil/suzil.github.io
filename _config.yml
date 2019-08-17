@@ -27,11 +27,12 @@ github_username:  suzil
 markdown: kramdown
 
 remote_theme: suzil/whiteglass
-#theme: jekyll-whiteglass
+# theme: jekyll-whiteglass
 plugins:
   - jekyll-archives
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-remote-theme
 
 permalink: /:year/:month/:day/:title/
 paginate_path: /posts/:num/
