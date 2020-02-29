@@ -29,7 +29,7 @@ $on-laptop:        800px;
 
 
 
-// whiteglass also includes a mixin for defining media queries.
+// This theme also includes a mixin for defining media queries.
 // Use media queries like this:
 // @include media-query($on-palm) {
 //     .wrapper {
@@ -45,5 +45,5 @@ $on-laptop:        800px;
 
 
 
-// Import partials from the `whiteglass` theme.
-@import "whiteglass";
+// Import partials from the theme
+@import "suzil-theme";

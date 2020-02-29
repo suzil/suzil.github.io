@@ -14,7 +14,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Susannah Klanecek
+title: suzil@atl:~$
+author: Susannah Klaneček
 email: suzil@protonmail.ch
 description: >- # this means to ignore newlines until "baseurl:"
   emacs, julia, python, data pipelines, linux, kde
