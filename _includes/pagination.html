@@ -1,11 +1,24 @@
 {% if paginator.total_pages > 1 %}
-  <div class="pagination">
-    {% if paginator.next_page %}
-      <a class="previous" href="{{ paginator.next_page_path | relative_url }}">&laquo; Older</a>
-    {% endif %}
 
-    {% if paginator.previous_page %}
-      <a class="next" href="{{ paginator.previous_page_path | relative_url }}">Newer &raquo;</a>
-    {% endif %}
+  <div class="flex flex-col items-center">
+    <div class="inline-flex">
+      {% if paginator.next_page %}
+        <a class="previous" href="{{ paginator.next_page_path | relative_url }}">
+          <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded m-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path class="heroicon-ui" d="M5.41 11H21a1 1 0 0 1 0 2H5.41l5.3 5.3a1 1 0 0 1-1.42 1.4l-7-7a1 1 0 0 1 0-1.4l7-7a1 1 0 0 1 1.42 1.4L5.4 11z"/>Older</svg>
+          </button>
+        </a>
+      {% endif %}
+
+      {% if paginator.previous_page %}
+        <a class="next" href="{{ paginator.previous_page_path | relative_url }}">
+          <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded m-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path class="heroicon-ui" d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z"/>Newer</svg>
+          </button>
+        </a>
+      {% endif %}
+
+    </div>
   </div>
+
 {% endif %}

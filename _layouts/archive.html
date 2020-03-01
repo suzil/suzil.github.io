@@ -1,9 +1,11 @@
 ---
 layout: default
 ---
-<div class="home">
 
-  <h1 class="page-heading">Blog Archive</h1>
+<div class="flex flex-col items-center">
+  <div class="container mx-auto max-w-lg">
+  <h1 class="page-heading text-gray-900 text-3xl pt-8 mb-4">Blog Archive</h1>
+
 
   {{ content }}
 
@@ -14,8 +16,8 @@ layout: default
       {% capture post_lang %}{{ post.lang | default: site_lang }}{% endcapture %}
       {% capture lang %}{% if post_lang != site_lang %}{{ post_lang }}{% endif %}{% endcapture %}
 
-      <li>
-        <span class="post-meta">
+      <li class="my-6">
+        <span class="post-meta text-gray-600">
           {{ post.date | date: "%b %-d, %Y" }}
           {% if post.categories != empty or post.tags != empty %}
             {% include category_links.html categories=post.categories tags=post.tags %}
@@ -25,15 +27,16 @@ layout: default
           {% endif %}
         </span>
 
-        <h2>
+        <h2 class="my-0 py-1">
           {% if post.external-url %}
-            <a class="post-link" href="{{ post.external-url }}">{{ post.title | escape }} &rarr;</a>
+            <a class="post-link text-indigo-600 text-xl" href="{{ post.external-url }}">{{ post.title | escape }} &rarr;</a>
           {% else %}
-            <a class="post-link" href="{{ post.url | relative_url }}"{% if lang != empty %} lang="{{ lang }}"{% endif %}>{{ post.title | escape }}</a>
+            <a class="post-link text-indigo-600 text-xl" href="{{ post.url | relative_url }}"{% if lang != empty %} lang="{{ lang }}"{% endif %}>{{ post.title | escape }}</a>
           {% endif %}
         </h2>
       </li>
     {% endfor %}
   </ul>
 
+  </div>
 </div>

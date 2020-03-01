@@ -1,0 +1,251 @@
+---
+---
+/* Front matter is necessary for Jekyll */
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+/* Write your styles below this line. */
+.masonry {
+  display: flex;
+  flex-flow: column wrap;
+  max-height: 800px;
+  margin-left: -8px; /* Adjustment for the gutter */
+  width: 100%;
+}
+
+.masonry-brick {
+  margin: 0 8px 8px 0; /* Some gutter */
+}
+
+a {
+  @apply .text-indigo-600;
+}
+
+.post-header {
+  @apply py-8;
+}
+
+.post-header .post-title {
+  @apply text-gray-900 text-3xl;
+}
+
+.post-content p {
+  @apply mb-6 text-gray-900;
+}
+
+.post-content > h1, h2, h3, h4, h5, h6 {
+  @apply py-4 text-gray-900;
+}
+
+.post-content > h1 {
+  @apply text-3xl;
+}
+
+.post-content > h2 {
+  @apply text-2xl;
+}
+
+.post-content > h3 {
+  @apply text-xl;
+}
+
+.post-header .post-meta {
+  @apply mt-4 text-gray-600;
+}
+
+.social-icon {
+  width: 1.25rem;
+  opacity: 70%;
+}
+
+.about-me p {
+  @apply text-lg mb-6 max-w-2xl;
+}
+
+.highlight {
+  @apply px-4 py-1 my-4;
+}
+
+.highlight pre {
+  white-space: pre-wrap;
+}
+
+/* Font locking */
+.highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight {
+  color: #faf6e4;
+  background-color: #2d3748;
+}
+.highlight .gl {
+  color: #dee5e7;
+  background-color: #4e5d62;
+}
+.highlight .gp {
+  color: #a8e1fe;
+  font-weight: bold;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #6c8b9f;
+  font-style: italic;
+}
+.highlight .cp {
+  color: #b2fd6d;
+  font-weight: bold;
+}
+.highlight .err {
+  color: #fefeec;
+  /*  background-color: #cc0000; */
+}
+.highlight .gr {
+  color: #cc0000;  
+  font-weight: bold;
+  font-style: italic;
+}
+.highlight .k, .highlight .kd, .highlight .kv {
+  color: #D6BCFA;
+  font-weight: bold;
+}
+.highlight .o, .highlight .ow {
+  color: #A3BFFA;
+  font-weight: bold;
+}
+.highlight .p, .highlight .pi {
+  color: #A3BFFA;
+}
+.highlight .gd {
+  color: #cc0000;
+}
+.highlight .gi {
+  color: #b2fd6d;
+}
+.highlight .ge {
+  font-style: italic;
+}
+.highlight .gs {
+  font-weight: bold;
+}
+.highlight .gt {
+  color: #dee5e7;
+  background-color: #4e5d62;
+}
+.highlight .kc {
+  color: #f696db;
+  font-weight: bold;
+}
+.highlight .kn {
+  color: #FAF089;
+  font-weight: bold;
+}
+.highlight .kp {
+  color: #FAF089;
+  font-weight: bold;
+}
+.highlight .kr {
+  color: #FAF089;
+  font-weight: bold;
+}
+.highlight .gh {
+  color: #FAF089;
+  font-weight: bold;
+}
+.highlight .gu {
+  color: #FAF089;
+  font-weight: bold;
+}
+.highlight .kt {
+  color: #b2fd6d;
+  font-weight: bold;
+}
+.highlight .no {
+  color: #b2fd6d;
+  font-weight: bold;
+}
+.highlight .nc {
+  color: #b2fd6d;
+  font-weight: bold;
+}
+.highlight .nd {
+  color: #b2fd6d;
+  font-weight: bold;
+}
+.highlight .nn {
+  color: #b2fd6d;
+  font-weight: bold;
+}
+.highlight .bp {
+  color: #b2fd6d;
+  font-weight: bold;
+}
+.highlight .ne {
+  color: #b2fd6d;
+  font-weight: bold;
+}
+.highlight .nl {
+  color: #FAF089;
+  font-weight: bold;
+}
+.highlight .nt {
+  color: #FAF089;
+  font-weight: bold;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #f696db;
+  font-weight: bold;
+}
+.highlight .ld {
+  color: #f696db;
+  font-weight: bold;
+}
+.highlight .ss {
+  color: #f696db;
+  font-weight: bold;
+}
+.highlight .s, .highlight .sa, .highlight .sb, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .sr, .highlight .s1 {
+  color: #fff0a6;
+  font-weight: bold;
+}
+.highlight .se {
+  color: #A3BFFA;
+  font-weight: bold;
+}
+.highlight .sc {
+  color: #A3BFFA;
+  font-weight: bold;
+}
+.highlight .si {
+  color: #A3BFFA;
+  font-weight: bold;
+}
+.highlight .nb {
+  font-weight: bold;
+}
+.highlight .ni {
+  color: #999999;
+  font-weight: bold;
+}
+.highlight .w {
+  color: #BBBBBB;
+}
+.highlight .go {
+  color: #BBBBBB;
+}
+.highlight .nf, .highlight .fm {
+  color: #a8e1fe;
+}
+.highlight .py {
+  color: #a8e1fe;
+}
+.highlight .na {
+  color: #a8e1fe;
+}
+.highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi, .highlight .vm {
+  color: #a8e1fe;
+  font-weight: bold;
+}
+
+
+/* Write your styles above this line. */
+
+@tailwind utilities;

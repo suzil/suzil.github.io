@@ -2,28 +2,34 @@
 layout: default
 ---
 
-<div class="home">
+<div class="container mx-auto">
 
   {{ content }}
 
   {% capture site_lang %}{{ site.lang | default: "en" }}{% endcapture %}
 
-  <ul class="post-list">
+  <div class="flex p-8 pb-12">
+    <h1 class="text-gray-800 font-bold text-4xl w-3/5 self-center">I'm Susannah, a <span class="text-indigo-500">data scientist</span> who also does some web development</h1>
+    <img class="rounded-lg shadow-lg w-2/5" src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="Code on a laptop" />
+  </div>
+
+  <h1 class="text-2xl font-medium text-gray-800 underline">Recent blog posts:</h1>
+  
+  <div class="flex flex-col items-center">
+    <div class="masonry">
     {% for post in paginator.posts %}
       {% capture post_lang %}{{ post.lang | default: site_lang }}{% endcapture %}
       {% capture lang %}{% if post_lang != site_lang %}{{ post_lang }}{% endif %}{% endcapture %}
 
-      <li{% if lang != empty %} lang="{{ lang }}"{% endif %}>
-        <header class="post-header">
-          <h1 class="post-title">
-            {% if post.external-url %}
-              <a class="post-link" href="{{ post.external-url }}">{{ post.title | escape }} &rarr;</a>
-            {% else %}
-              <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-            {% endif %}
-          </h1>
-
-          <p class="post-meta">
+      <div class="masonry-brick">
+      <div class="my-8 max-w-lg rounded overflow-hidden shadow-sm bg-white">
+        <div class="px-6 py-4">
+          {% if post.external-url %}
+            <a class="font-semibold text-xl mb-2 text-gray-900 my-4" href="{{ post.external-url }}">{{ post.title | escape }} &rarr;</a>
+          {% else %}
+            <a class="font-semibold text-xl mb-2 text-gray-900 my-4" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          {% endif %}
+          <p class="text-gray-600 mb-2">
             {{ post.date | date: "%b %-d, %Y" }}
             {% if post.categories != empty or post.tags != empty %}
               {% include category_links.html categories=post.categories tags=post.tags %}
@@ -32,20 +38,23 @@ layout: default
               • <a href="{{ post.url | relative_url }}">Permalink</a>
             {% endif %}
           </p>
-        </header>
-
-        <div class="post-content">
-          {{ post.excerpt }}
-        </div>
-        {% if post.content contains site.excerpt_separator %}
-          <p class="post-continue">
-            <a href="{{ post.url | relative_url }}">Read on &rarr;</a>
+          <p class="text-gray-700 text-base m-0">
+            {{ post.excerpt }}
           </p>
-        {% endif %}
-      </li>
+          {% if post.content contains site.excerpt_separator %}
+            <p>
+              <a class="float-right pb-3 text-gray-700 m-0" href="{{ post.url | relative_url }}">Read on &rarr;</a>
+            </p>
+          {% endif %}
+        </div>
+      </div>
+      </div>
+
     {% endfor %}
-  </ul>
+    </div>
+  </div>
 
   {% include pagination.html %}
 
 </div>
+
