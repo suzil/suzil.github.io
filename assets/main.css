@@ -19,7 +19,7 @@
 }
 
 a {
-  @apply .text-indigo-600;
+  @apply text-indigo-600;
 }
 
 .post-header {
@@ -59,8 +59,20 @@ a {
   opacity: 70%;
 }
 
-.about-me p {
-  @apply text-lg mb-6 max-w-2xl;
+.about-me {
+  @apply text-lg max-w-2xl;
+}
+
+.about-me p, ul, ol {
+  @apply py-2;
+}
+
+.about-me ul {
+  @apply list-disc;
+}
+
+.about-me li {
+  @apply ml-6 my-2;
 }
 
 .highlight {
