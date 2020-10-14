@@ -2,27 +2,15 @@
 layout: default
 ---
 
+
+
 <div class="flex flex-col items-center">
-  <img width="500px" src="/assets/undraw_programmer_imem.svg" alt="Drawing of a programmer" class="py-20">
+  <h1 class="text-4xl mt-8">Hello 👋</h1>
+  <img width="300px" src="/assets/portrait.jpg" alt="Portrait" class="rounded-full flex items-center justify-center my-8">
 </div>
 
 <div class="flex flex-col items-center">
   <div class="about-me">
-    <p>I work as a data scientist at <a
-    href="https://scoutbee.com/">scoutbee</a>, a B2B procurement startup. Right
-    now I work remotely from Atlanta.</p>
-    <p>I'm a quiet person who really enjoys:</p>
-    <ul>
-      <li>reading (usually for learning new things, but lately I've also been
-      reading the Game of Thrones books)</li>
-      <li>playing the piano</li>
-    </ul>
-    <p>
-      I have a personal kanban board of all the things I want to learn and I use
-      <a href="https://complice.co/">Complice</a> to my daily tasks oriented with my longer-term
-      goals.
-    </p>
+    {{ content }}
   </div>
 </div>
-
-{{ content }}
