@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 I work as a data scientist at [scoutbee](https://scoutbee.com/), a B2B
-procurement startup. Right now I work remotely from Atlanta.
+procurement startup. Right now I work remotely from Austin, TX.
 
 My freetime activities:
 - reading
